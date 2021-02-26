@@ -155,7 +155,7 @@ public class SwiftyTesseract {
     let _ = semaphore.wait(timeout: .distantFuture)
     
     // pixImage is a var because it has to be passed as an inout paramter to pixDestroy to release the memory allocation
-    var pixImage: Pix
+    var pixImage: Pix!
     
     defer {
       // Release the Pix instance from memory
